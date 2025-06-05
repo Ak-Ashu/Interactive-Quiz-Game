@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Quiz Game</title>
+  <link rel="stylesheet" href="Quiz.css">
+</head>
+
+<body>
+  <h1>Interactive Quiz Game</h1>
+  <div class="quiz-container">
+    <div class="controls">
+      <label for="category">Choose Category:</label>
+      <select id="category">
+        <option value="all">All</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+      </select>
+    </div>
+
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="question" id="question">
+      <h1>🅲🅻🅸🅲🅺 🆂🆃🅰🆁🆃 🆀🆄🅸🆉</h1>
+    </div>
+    <div class="answers" id="answers"></div>
+    <div id="timer">Time left: 10s</div>
+    <div class="feedback" id="feedback"></div>
+    <div class="score-container" id="score"></div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn" disabled>Previous</button>
+      <button id="nextBtn" disabled>Next</button>
+    </div>
+
+    <button id="startBtn">Start Quiz</button>
+    <button id="restart">Restart Quiz</button>
+  </div>
+  <script src="Quiz.js"></script>
+</body>
+
+</html>

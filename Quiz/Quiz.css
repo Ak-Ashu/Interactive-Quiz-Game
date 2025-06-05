@@ -1,0 +1,178 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f8ff;
+  background-image: url('OIP.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.quiz-container {
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  color: #ffffff;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+select {
+  height: 40px; /* increase height */
+  padding: 5px 10px;
+  font-size: 1rem; /* adjust text size */
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+
+.question {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.answers button {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  transition: background 0.3s;
+  color: #333;
+}
+
+.answers button:hover {
+  background-color: #3dbcc5;
+}
+
+.score-container {
+  display: none;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  font-weight: bold;
+  color: #00ffcc;
+}
+
+.feedback {
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.feedback.show {
+  opacity: 1;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.nav-buttons button {
+  padding: 12px 28px;
+  font-size: 16px;
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#startBtn, #restart {
+  padding: 14px 30px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 25px;
+}
+
+#startBtn:hover, #restart:hover {
+  background-color: #218838;
+}
+
+.correct {
+  background-color: #d4edda !important;
+  border: 2px solid #1cdd49;
+  color: #155724;
+}
+
+.incorrect {
+  background-color: #f8d7da !important;
+  border: 2px solid #c50b1e;
+  color: #7e0511;
+}
+
+#timer {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+#progress-bar-container {
+  width: 100%;
+  background: #eee;
+  height: 12px;
+  border-radius: 10px;
+  margin: 15px 0 25px;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #4caf50;
+  border-radius: 10px;
+  transition: width 0.4s ease-in-out;
+}
